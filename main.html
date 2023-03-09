@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
+  <body>
+
+    <h2 id="po">Input digits</h2>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <button type="button" name="button" onclick="array()">
+        Submit
+      </button>
+    </form>
+    <br>
+
+    <p id="par"></p>
+
+    <script type="text/javascript">
+      var k = "Array is ";
+
+      function array() {
+        var input = document.getElementsByName('array[]');
+
+        for (var i = 0; i < input.length; i++) {
+          var a = input[i];
+          k = k + a.value + " ";
+        }
+
+        document.getElementById("par").innerHTML = k;
+      }
+
+    </script>
+  </body>
+
+</html>
