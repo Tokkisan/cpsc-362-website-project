@@ -7,6 +7,80 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+         <form action="https://tokkisan.github.io/sorting.html">
+      <label for="numbers"> Choose number of elements:
+      </label>
+      <select id="number" name="numbers">
+        <option value="1">1</option>
+        <option value="1">2</option>
+        <option value="1">3</option>
+        <option value="1">4</option>
+        <option value="1">5</option>
+        <option value="1">6</option>
+        <option value="1">7</option>
+        <option value="1">8</option>
+        <option value="1">9</option>
+        <option value="1">10</option>
+        <option value="1">11</option>
+        <option value="1">12</option>
+        <option value="1">13</option>
+        <option value="1">14</option>
+        <option value="1">15</option>
+        <option value="1">16</option>
+        <option value="1">17</option>
+        <option value="1">18</option>
+        <option value="1">19</option>
+        <option value="1">20</option>
+      </select>
+      <input type = "submit">
+    </form>
+
+    <h2 id="po">Input digits</h2>
+    <form class="" action="https://tokkisan.github.io/sorting.html" method="post">
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <input type="text" name="array[]" size="1" value="" />
+      <button type="button" name="button" onclick="array()">
+        Submit
+      </button>
+    </form>
+    <br>
+
+    <p id="par"></p>
+
+    <script type="text/javascript">
+      var k = "Array is ";
+
+      function array() {
+        var input = document.getElementsByName('array[]');
+
+        for (var i = 0; i < input.length; i++) {
+          var a = input[i];
+          k = k + a.value + " ";
+        }
+
+        document.getElementById("par").innerHTML = k;
+      }
+
+    </script>
+    </body>
     
         <header>
             <nav>
