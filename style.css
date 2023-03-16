@@ -67,7 +67,14 @@ header nav a{
 .body{
     background-color: #cecece;
 }
-
+.main {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 120px;
+    align-items: center;
+}
 footer{
     background-color: #6dcbe8;
     height: 25px;
