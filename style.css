@@ -87,3 +87,11 @@ footer{
     align-items: center;
     text-align: center;
 }
+.vl {
+    border-left: 6px solid rgb(64, 64, 64);
+    height: 1000%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 145%;
+  }
