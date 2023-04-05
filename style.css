@@ -106,6 +106,16 @@ footer{
     left: -95px;
 }
 
-output {
+  .main {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 110px;
+    align-items: center;
+    position: absolute;
+    left: -95px;
+}
+;output {
   background-color: white;
 }
