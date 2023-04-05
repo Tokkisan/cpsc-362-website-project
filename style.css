@@ -12,12 +12,12 @@
 }
 
 p{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
-    color: #814040;
-    text-align: center;
+    color: black;
+    text-align: left;
     padding: 10px;
-    background-color: #000;
+    background-color: #cecece;
 }
 
 /* Header - Nav */
@@ -95,3 +95,17 @@ footer{
     margin-left: -3px;
     top: 145%;
   }
+  .max {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 110px;
+    align-items: center;
+    position: absolute;
+    left: -95px;
+}
+
+;output {
+  background-color: white;
+}
