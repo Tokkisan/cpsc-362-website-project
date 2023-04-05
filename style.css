@@ -68,7 +68,7 @@ header nav a{
     text-decoration: none;
     color: #000000;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     align-items: center;
 }
 
@@ -89,7 +89,7 @@ footer{
 }
 .vl {
     border-left: 6px solid rgb(64, 64, 64);
-    height: 1000%;
+    height: 100000%;
     position: absolute;
     left: 50%;
     margin-left: -3px;
