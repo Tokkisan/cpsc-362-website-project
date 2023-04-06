@@ -133,9 +133,7 @@ footer{
     padding: 75px;
     align-items: left;
     position: absolute;
-    right: -20px;
-    padding-right: -400px;
-
+    right: 200px;
 }
 output {
   background-color: white;
