@@ -35,11 +35,13 @@
         <input type="text" id="input">
         <button onclick="quicksort()">Sort</button>
 
-<div class = "output">
-        <div id="output"></div>
+        <div class="output">
+          <div id="output"></div>
+          <div id="third"></div>
         </div>
-        <div id="third"></div>
         <script>
+          let counter = 1;
+
           function quicksort() {
             const input = document.getElementById("input").value;
             //using input.split(",") to split and create array "Number" with .map
@@ -49,24 +51,25 @@
             //using innerHTML to clear input
             output.innerHTML = "";
             //defining a counter c 
-            var c = 1;
 
             //calling quick sort helper that needs (arr, left, right, counter)
-            QShelper(arr, 0, arr.length - 1, c);
+            QShelper(arr, 0, arr.length - 1, 0);
             console.log(arr);
             ThirdL(arr);
+            counter = 1;
           }
 
           //helper function b/c arr is not defined before quicksort function
-          function QShelper(arr, left, right, counter) {
+          function QShelper(arr, left, right) {
             if (left < right) {
               //PI = pivot index (basically where we start the sort from)
               const PI = partition(arr, left, right);
               //calling function 
-              printout(arr, counter);
 
-              QShelper(arr, left, PI - 1, counter + 1); //before pivot index
-              QShelper(arr, PI + 1, right, counter + 1); //after pivot index
+              printout(arr);
+
+              QShelper(arr, left, PI - 1); //before pivot index
+              QShelper(arr, PI + 1, right); //after pivot index
             }
           }
 
@@ -97,11 +100,12 @@
             arr[j] = temp;
           }
 
-          function printout(arr, counter) {
+          function printout(arr) {
             const output = document.getElementById("output");
             const iteration = document.createElement("p");
             iteration.innerText = `Step ${counter}: ${arr.toString()}`;
             output.appendChild(iteration);
+            counter++;
           }
 
           function ThirdL(arr) {
