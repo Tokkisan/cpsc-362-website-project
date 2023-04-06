@@ -100,17 +100,6 @@
 
         </script>
         </div>
-  </body>
-
-  <footer>
-    Garrett Kostyk, Erik Nguyen, Jason Lee, Aaron Lee, Huy Nguyen
-  </footer>
-
-</html>
-
-<!--  
- -->
-      </div>
       <div class="section">
         <h2>Merge Sort</h2>
         <!DOCTYPE html>
@@ -145,9 +134,9 @@
 <div class = "sort2">
 
      <h1>Merge Sort Visualizer</h1>
-    <label for="input">Input numbers separated by commas:</label>
+    <label for="input2">Input numbers separated by commas:</label>
     <br>
-    <input type="text" id="input">
+    <input type="text" id="input2">
     <button onclick="runMergeSort()">Sort</button> 
     
    
@@ -210,7 +199,7 @@ function mergeSort(arr, steps) {
 
       function runMergeSort() {
       //get input string and split into array
-        const inputStr = document.getElementById('input').value;
+        const inputStr = document.getElementById('input2').value;
         const inputArray = inputStr.split(',').map(Number);
 
             //container element to display steps
@@ -230,15 +219,8 @@ function mergeSort(arr, steps) {
       }
   </script>    
 </div>
+</body>
     <footer>
         Garrett Kostyk, Erik Nguyen, Jason Lee, Aaron Lee, Huy Nguyen
     </footer>
-    </body>
-</html>
-
-<!--  
- -->
-      </div>
-    </div>
-  </body>
 </html>
