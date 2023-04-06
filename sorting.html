@@ -65,6 +65,9 @@
             const input = document.getElementById("input").value;
             const arr = input.split(",").map(Number);
 						const output = document.getElementById("output");
+            
+           //clears steps after each array 
+             output.innerHTML = "";
            
             // Get the length of the array
             let len = arr.length;
@@ -80,7 +83,7 @@
                 }
               }
               // console output for steps
-              console.log(`Iteration ${a}: ${arr.join(', ')}`);
+              console.log(`Step ${a}: ${arr.join(', ')}`);
               printout(arr, c);
               c++;
             }
@@ -221,7 +224,7 @@ function mergeSort(arr, steps) {
             //display sorted array in steps
         for (let i = 0; i < steps.length; i++) {
           const stepElement = document.createElement('div');
-          stepElement.textContent = `Step ${i + 1}: [${steps[i].join(', ')}]`;
+          stepElement.textContent = `Step ${i + 1}: ${steps[i].join(', ')}`;
           stepsContainer.appendChild(stepElement);
         }
       }
