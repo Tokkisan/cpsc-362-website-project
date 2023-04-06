@@ -125,6 +125,16 @@ footer{
     position: absolute;
     left: -95px;
 }
+.sort2 {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 110px;
+    align-items: center;
+    position: absolute;
+    right: -80px;
+}
 output {
   background-color: white;
 }
