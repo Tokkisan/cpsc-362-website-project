@@ -138,3 +138,13 @@ footer{
 output {
   background-color: white;
 }
+
+.wanted img {
+  height: 300px;
+  width: auto;
+  position: absolute;
+  padding-left:100px;
+  left: 10px;
+  top: 35%;
+}
+
