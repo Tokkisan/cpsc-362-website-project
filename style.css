@@ -148,3 +148,12 @@ output {
   top: 35%;
 }
 
+.wanted2 img {
+    height: 300px;
+    width: auto;
+    position: absolute;
+    padding-left:40%;
+    left: 10px;
+    top: 35%;
+  }
+
