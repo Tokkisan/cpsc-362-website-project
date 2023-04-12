@@ -41,7 +41,7 @@ header{
 }
 
 header nav{
-    background-color: #6dcbe8;
+    background-color: #d8454f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +77,7 @@ body{
 }
 
 footer{
-    background-color: #6dcbe8;
+    background-color: #d8454f;
     height: 25px;
     width: 100%;
     position: fixed;
