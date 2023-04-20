@@ -40,7 +40,7 @@ function maxSubarray(arr) {
             const sum = subarray.reduce((acc, val) => acc + val, 0);
             // Add step to visualization
             const step = document.createElement("div");
-            step.innerText = `Subarray: [${subarray}], Sum: ${sum}`;
+            step.innerText = `Subarray: ${subarray}, Sum: ${sum}`;
             if (sum > maxSum) {
               step.classList.add("highlight");
             }
