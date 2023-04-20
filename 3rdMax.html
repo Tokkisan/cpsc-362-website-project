@@ -123,6 +123,75 @@
         </script>
       </div>
     </div>
+    
+   <div class = "max2">
+
+     <h1>Third Max loop</h1>
+      <label for="input2">Enter comma-separated numbers:</label>
+      <br>
+      <input type="text" id="input2">
+      <button onclick="findThird()">Sort</button>
+   <div class="output">
+          <div id="output2"></div>
+          <div id="third2"></div>
+        </div>
+    <script>
+
+      function thirdMax(arr) {
+        let m1 = Number.NEGATIVE_INFINITY;
+        let m2 = Number.NEGATIVE_INFINITY;
+        let m3 = Number.NEGATIVE_INFINITY;
+
+        for (let x of arr) {
+          if (x > m1) {
+            m3 = m2;
+            m2 = m1;
+            m1 = x;
+            printout([m1, m2, m3]);
+          } else if (x > m2 && x < m1) {
+            m3 = m2;
+            m2 = x;
+            printout([m1, m2, m3]);
+          } else if (x > m3 && x < m2) {
+            m3 = x;
+            printout([m1, m2, m3]);
+          }
+        }
+
+        return m3;
+      }
+
+      function findThird() {
+        const input2 = document.getElementById("input2").value;
+        const arr2 = input2.split(",").map(Number);
+				output2.innerHTML = "";
+
+        counter = 1;
+        
+        //for distinct
+        let darr = new Set(arr2);
+
+        if (darr.size === arr2.length && !arr2.includes(Number.NEGATIVE_INFINITY) && arr2.length >= 3) {
+          let max3 = thirdMax(arr2);
+          third2.innerHTML = "The third-largest element is: " + max3;
+        }else if (darr.size != arr2.length) {
+        	third2.innerHTML = "Not Distinct";
+        }
+        else {
+          third2.innerHTML = "array needs to have atleast 3 elements";
+        }
+      }
+
+      function printout(arr) {
+        const output = document.getElementById("output2");
+        const iteration = document.createElement("p");
+        iteration.innerText = `Step ${counter}: ${arr.toString()}`;
+        output.appendChild(iteration);
+        counter++;
+      }
+    </script>
+    </div>
+
     <footer>
       Garrett Kostyk, Erik Nguyen, Jason Lee, Aaron Lee, Huy Nguyen
     </footer>
