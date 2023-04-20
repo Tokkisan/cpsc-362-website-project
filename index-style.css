@@ -145,37 +145,39 @@ output {
 }
 
 .wanted img {
-  height: 300px;
-  width: auto;
-    position: absolute;
-  float: right;
-  margin-left: 500px;
-  padding: 0;
-  left: 10px;
-  top: 35%;
-    border: 10px solid red;
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 257px;
+  height: 307px;
+  left: 213px;
+  top: 250px;
+  
+  background: #B5A87D;
+  border: 10px solid #D93B3B;
 }
 
 .wanted2 img {
-    height: 300px;
-    width: auto;
-    position: absolute;
-    float: right;
-    margin-left: 800px;
-    padding: 0;
-    left: 10px;
-    top: 35%;
-    border: 10px solid white;
-  }
-.wanted3 img {
-    height: 300px;
-    width: auto;
-    position: absolute;
-    float: right;
-    margin-left: 1100px;
-    padding: 0;
-    left: 10px;
-    top: 35%;
-    border: 10px solid blue;
-  }
+  box-sizing: border-box;
 
+  position: absolute;
+  width: 257px;
+  height: 307px;
+  left: 591px;
+  top: 250px;
+  
+  background: #B5A87D;
+  border: 10px solid #FFFFFF;
+}
+.wanted3 img {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 257px;
+  height: 307px;
+  left: 971px;
+  top: 250px;
+  
+  background: #B5A87D;
+  border: 10px solid #2059ED;
+}
