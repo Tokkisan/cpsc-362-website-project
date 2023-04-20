@@ -156,4 +156,14 @@ output {
     left: 10px;
     top: 35%;
   }
-
+  
+  .max2 {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 110px;
+    align-items: left;
+    position: absolute;
+    right: 100px;
+}
