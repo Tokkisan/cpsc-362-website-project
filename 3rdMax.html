@@ -36,7 +36,7 @@
         <input type="text" id="input">
         <button onclick="quicksort()">Sort</button>
 
-        <div class="output">
+        <div class="output2">
           <div id="output"></div>
           <div id="third"></div>
         </div>
@@ -147,14 +147,14 @@
             m3 = m2;
             m2 = m1;
             m1 = x;
-            printout([m1, m2, m3]);
+            printout2([m1, m2, m3]);
           } else if (x > m2 && x < m1) {
             m3 = m2;
             m2 = x;
-            printout([m1, m2, m3]);
+            printout2([m1, m2, m3]);
           } else if (x > m3 && x < m2) {
             m3 = x;
-            printout([m1, m2, m3]);
+            printout2([m1, m2, m3]);
           }
         }
 
@@ -182,7 +182,7 @@
         }
       }
 
-      function printout(arr) {
+      function printout2(arr) {
         const output = document.getElementById("output2");
         const iteration = document.createElement("p");
         iteration.innerText = `Step ${counter}: ${arr.toString()}`;
