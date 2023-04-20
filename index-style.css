@@ -73,12 +73,13 @@ header nav a{
 }
 
 body {
-    background-image: url(https://i.postimg.cc/mrwLPWJn/New-Project.png);
+    background-image: url("images/background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 
 footer{
     background-color: #d8454f;
