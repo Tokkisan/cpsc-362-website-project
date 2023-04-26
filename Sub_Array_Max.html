@@ -72,7 +72,6 @@
         const inputArray = inputArrayString.split(",").map(x => Number(x.trim()));
 
         //clear previous output and steps
-        document.getElementById("output-array").innerText = "";
         document.getElementById("third").innerText = "";
         document.getElementById("steps").innerHTML = "";
         document.getElementById("output-sum").innerText = "";
@@ -103,8 +102,8 @@
         }
 
         //Display maximum subarray and maximum sum
-        document.getElementById("output-array").innerText = `${maxSubarray}`;
-        document.getElementById("output-sum").innerText = `${maxSum}`;
+        document.getElementById("output-sum").innerText = `${"max: " + maxSum + " Array: " + maxSubarray}`;
+
       }
     </script>
      <footer>
