@@ -59,9 +59,13 @@
         <br>
 
         <div id= "output"></div>
+        <br>
+        <div id="timer1"></div>
         </div>
         <script type="text/javascript">
           function bubbleSort() {
+          const start1 = performance.now();
+
             // Declare an empty array and get all the input elements
             var c = 1;
             const input = document.getElementById("input").value;
@@ -89,8 +93,12 @@
               printout(arr, c);
               c++;
             }
+						const end1 = performance.now();
+						const total1 = end1 - start1;
+						document.getElementById("timer1").innerHTML = `Total time = ${total1} ms.`;
             // Display the sorted array in the HTML document
             return arr;
+           
           }
 
           function printout(arr, counter) {
@@ -98,7 +106,10 @@
             const iteration = document.createElement("p");
             iteration.innerText = `Step ${counter}: ${arr.toString()}`;
             output.appendChild(iteration);
+            
           }
+          
+          
 
         </script>
         </div>
@@ -114,6 +125,7 @@
     
    
     <div id="steps-container"></div>
+    <div id="timer2"></div>
     
   <script>
 
@@ -171,6 +183,8 @@ function mergeSort(arr, steps) {
       }
 
       function runMergeSort() {
+      const start2 = performance.now();
+
       //get input string and split into array
         const inputStr = document.getElementById('input2').value;
         const inputArray = inputStr.split(',').map(Number);
@@ -182,6 +196,9 @@ function mergeSort(arr, steps) {
         const steps = [];
       //call mergesort func
         const sortedArray = mergeSort(inputArray, steps);
+        const end2 = performance.now();
+const total2 = end2 - start2;
+document.getElementById("timer2").innerHTML = `Total time = ${total2} ms.`;
         
             //display sorted array in steps
         for (let i = 0; i < steps.length; i++) {
@@ -191,6 +208,7 @@ function mergeSort(arr, steps) {
         }
       }
   </script>    
+</div>
 </div>
 </body>
     <footer>
