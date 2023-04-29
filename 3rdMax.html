@@ -39,11 +39,15 @@
         <div class="output2">
           <div id="output"></div>
           <div id="third"></div>
+          <div id="timer1">
+          </div>
         </div>
         <script>
           let counter = 1;
 
           function quicksort() {
+          const start1 = performance.now();
+
             const input = document.getElementById("input").value;
             //using input.split(",") to split and create array "Number" with .map
             const arr = input.split(",").map(Number);
@@ -58,6 +62,9 @@
             console.log(arr);
             ThirdL(arr);
             counter = 1;
+            const end1 = performance.now();
+const total1 = end1 - start1;
+document.getElementById("timer1").innerHTML = `Total time = ${total1} ms.`;
           }
 
           //helper function b/c arr is not defined before quicksort function
@@ -134,6 +141,8 @@
    <div class="output">
           <div id="output2"></div>
           <div id="third2"></div>
+          <div id="timer2">
+          </div>
         </div>
     <script>
 
@@ -162,6 +171,8 @@
       }
 
       function findThird() {
+      const start2 = performance.now();
+
         const input2 = document.getElementById("input2").value;
         const arr2 = input2.split(",").map(Number);
 				output2.innerHTML = "";
@@ -173,6 +184,9 @@
 
         if (darr.size === arr2.length && !arr2.includes(Number.NEGATIVE_INFINITY) && arr2.length >= 3) {
           let max3 = thirdMax(arr2);
+          const end2 = performance.now();
+const total1 = end2 - start2;
+document.getElementById("timer2").innerHTML = `Total time = ${total1} ms.`;
           third2.innerHTML = "The third-largest element is: " + max3;
         }else if (darr.size != arr2.length) {
         	third2.innerHTML = "Not Distinct";
@@ -180,6 +194,7 @@
         else {
           third2.innerHTML = "array needs to have atleast 3 elements";
         }
+        
       }
 
       function printout2(arr) {
