@@ -127,7 +127,9 @@
     
    
     <div id="steps-container"></div>
+	<div class= "time2">
     <div id="timer2"></div>
+	</div>
     
   <script>
 
@@ -204,7 +206,7 @@ document.getElementById("timer2").innerHTML = `Total time = ${total2} ms.`;
         
             //display sorted array in steps
         for (let i = 0; i < steps.length; i++) {
-          const stepElement = document.createElement('div');
+          const stepElement = document.createElement('p');
           stepElement.textContent = `Step ${i + 1}: ${steps[i].join(', ')}`;
           stepsContainer.appendChild(stepElement);
         }
