@@ -32,7 +32,7 @@ p{
 
 header{
     background-color: #000;
-    height: 100px;
+    height: 105px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -166,4 +166,8 @@ output {
     align-items: left;
     position: absolute;
     right: 100px;
+}
+
+.time1 {
+  padding: 10px;
 }
