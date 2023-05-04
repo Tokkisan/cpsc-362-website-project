@@ -88,7 +88,7 @@ footer{
     text-align: center;
 }
 .vl {
-    border-left: 6px solid rgb(64, 64, 64);
+    border-left: 6px solid rgb(0, 0, 0);
     height: 10000%;
     position: absolute;
     left: 50%;
@@ -96,7 +96,7 @@ footer{
     top: 145%;
   }
 .v2 {
-  border-left: 6px solid rgb(64, 64, 64);
+  border-left: 6px solid rgb(0, 0, 0);
   height: 10000%;
   position: absolute;
   left: 50%;
@@ -109,10 +109,10 @@ footer{
     color: #000000;
     font-weight: bold;
     font-size: 15px;
-    padding: 110px;
+    padding: 135px;
     align-items: center;
     position: absolute;
-    left: -95px;
+    left: 140px;
 }
 
   .main {
@@ -123,17 +123,17 @@ footer{
     padding: 110px;
     align-items: center;
     position: absolute;
-    left: -95px;
+    left: 200px;
 }
 .sort2 {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
     font-size: 15px;
-    padding: 75px;
+    padding: 100px;
     align-items: left;
     position: absolute;
-    right: 200px;
+    right: 400px;
 }
 output {
   background-color: white;
@@ -162,10 +162,10 @@ output {
     color: #000000;
     font-weight: bold;
     font-size: 15px;
-    padding: 110px;
-    align-items: left;
+    padding: 135px;
+    align-items: center;
     position: absolute;
-    right: 100px;
+    right: 300px;
 }
 
 .time1 {
