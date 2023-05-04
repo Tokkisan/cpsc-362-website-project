@@ -115,6 +115,22 @@ footer{
     left: 140px;
 }
 
+  .sub2 {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 135px;
+    align-items: center;
+    position: absolute;
+    left: 140px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
   .main {
     text-decoration: none;
     color: #000000;
