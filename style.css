@@ -183,6 +183,27 @@ output {
     position: absolute;
     right: 300px;
 }
+.sub1 {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 135px;
+    align-items: center;
+    position: absolute;
+    left: 140px;
+}
+  .sub2 {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 135px;
+    align-items: center;
+    position: absolute;
+    right: 140px;
+}
+ 
 
 .time1 {
   padding: 10px;
