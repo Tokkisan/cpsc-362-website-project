@@ -38,6 +38,7 @@
         <button onclick="runAlgorithm()">Sort</button>
 
         <div class="output">
+	<br>
           <div id="output-array"></div>
           <div id="third"></div>
           <div id="steps"></div>
@@ -115,12 +116,15 @@
         <br>
         <input type="text" id="input1">
         <button onclick="runMaxSubarray()">Sort</button>
+
         <div class="output2">
           <div id="output-array1"></div>
+	<br>
           <div id="third1"></div>
           <div id="steps1"></div>
           <br>
           <div id="output-sum1"></div>
+
         </div>
       </div>
     </div>
@@ -179,7 +183,7 @@ function visualizeMaxSubarray(arr) {
 function visualizeMaxSubarrayPage(arr) {
   const result = document.createElement("div");
   const steps = visualizeMaxSubarray(arr);
-  let stepsHTML = "<p>Steps:</p><ul>";
+  let stepsHTML = "Steps:<ul>";
   let maxStartIndex = 0;
   let maxEndIndex = 0;
   let maxSum = arr[0];
@@ -197,7 +201,7 @@ function visualizeMaxSubarrayPage(arr) {
   });
   stepsHTML += "</ul>";
   const maxSubarray = arr.slice(maxStartIndex, maxEndIndex + 1);
-  stepsHTML += `<p>Subarray: ${maxSubarray.join(", ")}</p>`;
+  stepsHTML += `Subarray: ${maxSubarray.join(", ")}`;
   result.innerHTML = stepsHTML;
   return result;
 }
@@ -209,7 +213,7 @@ function runMaxSubarray() {
   //Get max sum
   const max = maxSubarray(arr);
   const outputSum = document.getElementById("output-sum1");
-  outputSum.innerHTML = `<p>Max sum: ${max}</p>`;
+  outputSum.innerHTML = `Max sum: ${max}`;
 
   //visualize steps
   const outputSteps = document.getElementById("steps1");
