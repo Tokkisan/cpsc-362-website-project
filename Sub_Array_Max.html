@@ -44,6 +44,7 @@
           <div id="steps"></div>
           <br>
           <div id="output-sum"></div>
+	  <div id="timer1"></div>
         </div>
       </div>
     </div>
@@ -70,6 +71,8 @@
       }
 
       function runAlgorithm() {
+const start1 = performance.now();
+
         //get input array
         const inputArrayString = document.getElementById("input").value;
         const inputArray = inputArrayString.split(",").map(x => Number(x.trim()));
@@ -106,6 +109,9 @@
 
         //Display maximum subarray and maximum sum
         document.getElementById("output-sum").innerText = `${"max: " + maxSum + " Array: " + maxSubarray}`;
+const end1 = performance.now();
+const total1 = end1 - start1;
+document.getElementById("timer1").innerHTML = `Total time = ${total1} ms.`;
 
       }
     </script>
@@ -124,6 +130,7 @@
           <div id="steps1"></div>
           <br>
           <div id="output-sum1"></div>
+	<div id = "timer2"></div>
 
         </div>
       </div>
@@ -207,6 +214,8 @@ function visualizeMaxSubarrayPage(arr) {
 }
   
 function runMaxSubarray() {
+const start2 = performance.now();
+
   const input = document.getElementById("input1").value;
   const arr = input.split(",").map(Number);
 
@@ -223,7 +232,11 @@ function runMaxSubarray() {
 
   //output array
   const outputArray = document.getElementById("output-array1");
-  outputArray.innerHTML = outputArrayHTML;
+  //outputArray.innerHTML = outputArrayHTML;
+
+const end2 = performance.now();
+const total2 = end2 - start2;
+document.getElementById("timer2").innerHTML = `Total time = ${total2} ms.`;
 }
           </script>
      <footer>
