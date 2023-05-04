@@ -208,10 +208,11 @@ function visualizeMaxSubarrayPage(arr) {
   });
   stepsHTML += "</ul>";
   const maxSubarray = arr.slice(maxStartIndex, maxEndIndex + 1);
-  stepsHTML += `Subarray: ${maxSubarray.join(", ")}`;
+  stepsHTML += `Subarray: ${maxSubarray.join(", ")}, Max Sum: ${maxSum}`;
   result.innerHTML = stepsHTML;
   return result;
 }
+
   
 function runMaxSubarray() {
 const start2 = performance.now();
@@ -222,7 +223,7 @@ const start2 = performance.now();
   //Get max sum
   const max = maxSubarray(arr);
   const outputSum = document.getElementById("output-sum1");
-  outputSum.innerHTML = `Max sum: ${max}`;
+  
 
   //visualize steps
   const outputSteps = document.getElementById("steps1");
