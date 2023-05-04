@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/index.html">
+            <img src="images/logo.png" alt="" href="/index.html">
+          </a>
+        </div>
+        <ul>
+          <li>
+            <a>Sub-Array Max</a>
+          </li>
+        </ul>
+        <div class="vl"></div>
+      </nav>
+    </header>
+    <div class="sub2">
+      <div style="display:inline-block;vertical-align:top;">
+        <h1>Max Subarray O(n)</h1>
+        <label for="input">Input numbers separated by commas:</label>
+        <br>
+        <input type="text" id="input">
+        <button onclick="runMaxSubarray()">Sort</button>
+        <div class="output2">
+          <div id="output-array"></div>
+          <div id="third"></div>
+          <div id="steps"></div>
+          <br>
+          <div id="output-sum"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function maxSubarray(arr) {
+        let maxSum = arr[0];
+        let currentSum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          currentSum += arr[i];
+          if (currentSum > maxSum) {
+            maxSum = currentSum;
+          }
+          if (currentSum < 0) {
+            currentSum = 0;
+          }
+        }
+        return maxSum;
+      }
+
+      //steps visualizer func
+      function visualizeMaxSubarray(arr) {
+        let maxSum = arr[0];
+        let currentSum = 0;
+        let steps = [];
+        for (let i = 0; i < arr.length; i++) {
+          currentSum += arr[i];
+          steps.push({
+            "current sum": currentSum,
+            "max sum": maxSum,
+            "step": i+1
+          });
+          if (currentSum > maxSum) {
+            maxSum = currentSum;
+          }
+          if (currentSum < 0) {
+            currentSum = 0;
+          }
+        }
+
+        return steps;
+      }
+
+      //implement algorithm
+      function maxSubarrayPage(arr) {
+        const result = document.createElement("div");
+        const max = maxSubarray(arr);
+        result.innerHTML = `<p>Max sum: ${max}</p>`;
+        return result;
+      }
+
+
+//implement visualizer to page
+function visualizeMaxSubarrayPage(arr) {
+  const result = document.createElement("div");
+  const steps = visualizeMaxSubarray(arr);
+  let stepsHTML = "<p>Steps:</p><ul>";
+  steps.forEach(step => {
+    stepsHTML += `<li>Step ${step.step}: Current Sum = ${step["current sum"]}, Max Sum = ${step["max sum"]}</li>`
+
+  });
+  stepsHTML += "</ul>";
+  result.innerHTML = stepsHTML;
+  return result;
+}
+      
+function runMaxSubarray() {
+  const input = document.getElementById("input").value;
+  const arr = input.split(",").map(Number);
+
+  //Get max sum
+  const max = maxSubarray(arr);
+  const outputSum = document.getElementById("output-sum");
+  outputSum.innerHTML = `<p>Max sum: ${max}</p>`;
+
+  //visualize steps
+  const outputSteps = document.getElementById("steps");
+  const steps = visualizeMaxSubarrayPage(arr);
+  outputSteps.innerHTML = "";
+  outputSteps.appendChild(steps);
+
+  //output array
+  const outputArray = document.getElementById("output-array");
+  outputArray.innerHTML = outputArrayHTML;
+}
+          </script>
+     <footer>
+        Garrett Kostyk, Erik Nguyen, Jason Lee, Aaron Lee, Huy Nguyen
+    </footer>
+  </body>
+</html>
+
+
+<!--  
+ -->
